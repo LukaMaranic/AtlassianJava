@@ -1,0 +1,15 @@
+<form class="aui" method="post" action="/jira/rest/exercise/1.0/book" autocomplete="off">
+    <div class="field-group">
+        <label for="book-title">Book Title</label>
+        <input class="long-field text" type="text" id="book-title" name="title">
+    </div>
+    <div class="field-group">
+        <label for="book-author">Book Author</label>
+        <input class="long-field text" type="text" id="book-author" name="author">
+    </div>
+    <div class="buttons-container">
+        <div class="buttons">
+            <input class="button submit" type="submit" value="Save">
+        </div>
+    </div>
+</form>

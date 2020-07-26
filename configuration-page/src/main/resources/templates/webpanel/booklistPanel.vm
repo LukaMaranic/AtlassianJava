@@ -1,0 +1,20 @@
+<div class="aui-message aui-message-info">
+    <p class="title">Announcement</p>
+    <p>If you defined an announcement in the configuration it will appear here.</p>
+    <p>$!announcement</p>
+</div>
+<div id="booklistHandle" data-count="$itemsPerPage" data-pagination="$paginationEnabled" data-announcement="$announcement">
+    <table class="aui">
+        <thead>
+            <tr>
+                <th id="bookitem-id">ID</th>
+                <th id="bookitem-title">Title</th>
+                <th id="bookitem-author">Author</th>
+                <th id="bookitem-action-delete">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</div>

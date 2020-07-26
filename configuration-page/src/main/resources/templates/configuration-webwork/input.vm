@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Excercise App Configuration</title>
+    <meta name="decorator" content="atl.admin"/>
+    <meta name="admin.active.section" content="admin_plugins_menu/exercise-app-configuration-section"/>
+    <meta name="admin.active.tab" content="configuration-web-item"/>
+    <style>
+    #items-per-page {border-color: #B0C4DE;width:150px;height:25px}
+    #booklist-announcement {border-color: #B0C4DE;width:150px}
+    </style>
+</head>
+<body data-version="8.7.0">
+<form class="aui" method="post" action="ConfigurationWebworkAction.jspa" autocomplete="off">
+    <fieldset class="group">
+        <legend><span>Book list options</span></legend>
+        #if( $enablePaging == true )
+                    <div class="checkbox">
+                        <input class="checkbox" type="checkbox" name="enablePaging" id="enablePaging" $enablePaging checked>
+                        <label for="enablePaging">Enable paging</label>
+                    </div>
+                #else
+                    <div class="checkbox">
+                        <input class="checkbox" type="checkbox" name="enablePaging" id="enablePaging" $enablePaging>
+                        <label for="enablePaging">Enable paging</label>
+                    </div>
+                #end
+    </fieldset>
+    <div class="field-group">
+        <label for="items-per-page">Books per page (if paging is enabled)</label>
+        <input class="long-field number" type="number" id="items-per-page" min="1" max="10" name="itemsPerPage" value="$itemsPerPage">
+    </div>
+    <div class="field-group">
+        <label for="booklist-announcement">Book list announcement</label>
+        <textarea class="" name="announcement"
+                  id="booklist-announcement" placeholder="Your book list announcement here...">$!announcement</textarea>
+    </div>
+    <div class="buttons-container">
+        <div class="buttons">
+            <input class="button submit" type="submit" value="Save">
+            <a class="cancel" href="#">Cancel</a>
+        </div>
+    </div>
+</form>
+</body>
+</html>
